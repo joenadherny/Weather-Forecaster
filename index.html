@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
     <script src="./script.js" defer></script>
     <link
       rel="stylesheet"
@@ -20,15 +20,31 @@
           <div class="form-group p-2">
             <label for="city-input">Enter City Name</label>
             <input type="text" class="form" id="text-input" />
-            <button>Submit</button>
+            <button type="button" onclick="checkWeather()">Submit</button>
           </div>
         </form>
+        <div id="search-history" class="form-group p-2">
+          <h3>Search History</h3>
+         
+        </div>
       </div>
       <div id="results-container" class="col-md-9">
-        <div class="row"></div>
-        <div class="row"></div>
+       
+        <div class="current-conditions">
+          <h2 class="city"></h2>
+          <div class="temp"></div>
+          <div class="humidity"></div>
+          <div class="wind"></div>
+          <div class="date"></div>
+          <img class="weather-icon" src="" alt="Weather Icon" />
+        </div>
+        <div class="forecast">
+         
+        </div>
+        <div class="error" style="display: none;">City not found</div>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+
